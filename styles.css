@@ -13,12 +13,13 @@ body {
   width: 150px;
 }
 
-.menu a {
+
+.menu p {
   color: white;
-  padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
+
 
 .object-content {
   display: none;
@@ -29,11 +30,10 @@ body {
   margin-left: 1px;
   top: 1%;
   left: 100%;
-  min-width: fit-content;
   z-index: 1;
 }
 
-.object-content a {
+.object-content p {
   text-decoration: none;
   display: block;
   text-align: left;
@@ -45,4 +45,4 @@ body {
 
 .object-list:hover .object-content {
   display: block;
-}
+} 
