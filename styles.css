@@ -1,4 +1,4 @@
-body {
+ body {
   text-align: center;
   margin: 0;
   padding: 5% 0 5%;
@@ -13,21 +13,25 @@ body {
   width: 150px;
 }
 
-
 .menu p {
   color: white;
   text-decoration: none;
   display: block;
+  margin: 0;
+  padding: 10px 0;
 }
 
+.object-list {
+  border: solid 2px;
+  border-color: white;
+}
 
 .object-content {
   display: none;
   position: absolute;
   background-color: #7E8185;
-  width: 300px;
-  height: 200px;
   margin-left: 1px;
+  width: 300px;
   top: 1%;
   left: 100%;
   z-index: 1;
@@ -37,6 +41,12 @@ body {
   text-decoration: none;
   display: block;
   text-align: left;
+  padding: 5px;
+  margin: 0;
+}
+
+.object-content img {
+  width: 100%;
 }
 
 .object-list {

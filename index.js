@@ -1,5 +1,5 @@
 function products () {
-    fetch ("https://dummyjson.com/products")
+    fetch ("https://dummyjson.com/products/")
     .then(response => {
         console.log(response); 
         if (!response.ok) {
@@ -10,31 +10,28 @@ function products () {
     .then(data => {
         console.log(data.products);
 
-        const objectlist = data.products.map(products => {      //Добавление списка объектов
-            return `<p>${products.title}</p>`;
-        })
-        .join("");
-        document
-        .querySelector(".object-list")
-        .insertAdjacentHTML("afterbegin", objectlist);
-
-        const objectContent = data.products.map(products => {   //Добавление описания к объектам
+        const objectlist = data.products.slice(0, 10).map(products => {      //Добавление списка объектов object-list (+лимит) и добавление описания object-content
             return `
-            <p>${products.description}</p>
-            <p>${products.price}</p>
-            <p>${products.discountPercentage}</p>
-            <p>${products.rating}</p>
-            <p>${products.stock}</p>
-            <p>${products.brand}</p>
-            <p>${products.category}</p>
-            <img src="${products.thumbnail}" alt=""></img>
-            <img src="${products.images}" alt=""></img>
-            `
+                <div class="object-list">
+                    <p>${products.title}</p>
+                        <div class="object-content">                       
+                            <p>${products.description}</p>
+                            <p>Price: ${products.price}</p>
+                            <p>Discount: ${products.discountPercentage}</p>
+                            <p>Rating: ${products.rating}</p>
+                            <p>Stock: ${products.stock}</p>
+                            <p>Brand: ${products.brand}</p>
+                            <p>Category: ${products.category}</p>
+                            <img src="${products.thumbnail}" alt=""></img>
+                            <img src="${products.images}" alt=""></img>
+                        </div>
+                </div>
+            `;
         })
-        .join("");
-        document
-        .querySelector(".object-content")
-        .insertAdjacentHTML("afterbegin", objectContent);
+        .join(""); 
+        document                                                          //Вставка данных после класса .menu
+        .querySelector(".menu")
+        .insertAdjacentHTML("afterbegin", objectlist);    
 
     })
     .catch(error => {
