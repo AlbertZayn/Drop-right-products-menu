@@ -21,9 +21,16 @@
   padding: 10px 0;
 }
 
+.menu p:hover {
+  background-color: black;
+}
 .object-list {
-  border: solid 2px;
+  border: solid 1px;
   border-color: white;
+}
+
+.draggable {
+  cursor: move;
 }
 
 .object-content {
@@ -40,13 +47,14 @@
 .object-content p {
   text-decoration: none;
   display: block;
+  position: unset;
   text-align: left;
   padding: 5px;
   margin: 0;
 }
 
 .object-content img {
-  width: 100%;
+  width: 300px;
 }
 
 .object-list {
