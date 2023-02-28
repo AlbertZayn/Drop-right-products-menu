@@ -1,4 +1,4 @@
-# Infotecs-JS-test
+# Drop-right products menu
 
 https://albertzayn.github.io/Infotecs-JS-test/
 
