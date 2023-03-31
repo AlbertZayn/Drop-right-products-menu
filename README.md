@@ -1,6 +1,6 @@
 # Drop-right products menu
 
-https://albertzayn.github.io/Infotecs-JS-test/
+https://albertzayn.github.io/Drop-right-products-menu/
 
 Задание:
 
